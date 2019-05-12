@@ -13,7 +13,7 @@
     "color-no-invalid-hex": true,
     "color-named": "always-where-possible",
     "color-no-hex": true,
-    "function-whitelist": ["color"],
+    "function-whitelist": ["color", "calc", "rgba"],
     "no-empty-source": true,
     "no-duplicate-selectors": true,
     "no-duplicate-at-import-rules": true,

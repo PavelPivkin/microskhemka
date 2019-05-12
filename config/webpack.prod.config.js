@@ -34,7 +34,7 @@ module.exports = {
             use: ["source-map-loader"],
         }, {
             exclude: /node_modules/,
-            test: /\.(sa|sc|c)ss$/,
+            test: /\.(sa|sc|c|le)ss$/,
             use: [
                 MiniCssExtractPlugin.loader,
                 {

@@ -1,21 +1,12 @@
-import { bind } from 'classnames/bind';
 import * as React from 'react';
-import cls from '../../utlis/cls';
-import './Page.sass';
+import MHeader from '../../Header/Header';
+export class Page extends React.Component<{}> {
 
-const styles = require('./Page.sass');
-const classes = bind(styles);
-const b = cls('page');
-
-export interface IProps {
-    className?: string;
-    children?: React.ReactChild;
-}
-
-export function Page(props: IProps): JSX.Element {
-    return (
-        <div {...props} className={classes(b())}>
-            {props.children}
-        </div>
-    );
+    public render() {
+        return (
+            <>
+              <MHeader/>
+            </>
+        );
+    }
 }
