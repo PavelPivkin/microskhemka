@@ -34,7 +34,7 @@ module.exports = {
             use: ["source-map-loader"],
         }, {
             exclude: /node_modules/,
-            test: /\.(sa|sc|c|le)ss$/,
+            test: /\.(sa|sc|c)ss$/,
             use: [
                 MiniCssExtractPlugin.loader,
                 {
@@ -47,7 +47,29 @@ module.exports = {
                 },
                 "sass-loader",
             ],
-        }],
+        }, {
+                exclude: '/node_modules/',
+                test: /\.less$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "resolve-url-loader",
+                    "less-loader",
+                ],
+        },{
+
+                test: /\.jpe?g$|\.gif$|\.ico$|\.png$|\.svg$/,
+                use: 'file-loader?name=[name].[ext]?[hash]'
+        },{
+                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+        },{
+                test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'file-loader'
+        },{
+                test: /\.otf(\?.*)?$/,
+                use: 'file-loader?name=/fonts/[name].  [ext]&mimetype=application/font-otf'
+        }]
     },
     output: {
         filename: "bundle.js",
@@ -69,6 +91,9 @@ module.exports = {
     ],
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".json"],
+        alias: {
+            '../../theme.config': path.join(__dirname, '../semantic-theme/theme.config')
+        },
         modules: ["node_modules"],
     },
 };
