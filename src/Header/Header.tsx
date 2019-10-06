@@ -14,11 +14,6 @@ export default function MHeader(props: {}) {
             content='МИКРОСХЕМКА'
             inverted={true}
           />
-          <Header
-            as='h2'
-            content=''
-            inverted={true}
-          />
       </Container>
   );
 }

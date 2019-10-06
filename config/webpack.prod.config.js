@@ -34,16 +34,11 @@ module.exports = {
             use: ["source-map-loader"],
         }, {
             exclude: /node_modules/,
-            test: /\.(sa|sc|c)ss$/,
+            test: /\.(sa|c)ss$/,
             use: [
                 MiniCssExtractPlugin.loader,
                 {
                     loader: "css-loader",
-                    options: {
-                        modules: true,
-                        importLoaders: 1,
-                        localIdentName: '[sha1:hash:hex:12]',
-                    }
                 },
                 "sass-loader",
             ],
