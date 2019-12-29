@@ -9,6 +9,7 @@
     "tslint": "./node_modules/.bin/tslint --project tsconfig.json",
     "stylelint": "./node_modules/.bin/stylelint **/*.sass",
     "start": "webpack-dev-server --mode development --open --hot --config ./config/webpack.dev.config.js",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist --repo https://github.com/PavelPivkin/microskhemka",
     "build": "webpack --mode production --config  ./config/webpack.prod.config.js"
   },
