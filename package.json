@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "microskhemka",
+  "version": "0.0.1",
+  "description": "microskhemka.ru",
+  "main": "index.js",
+  "homepage": "https://pavelpivkin.github.io/microskhemka",
+  "author": "PavelPivkin",
   "dependencies": {
     "gatsby": "^5.13.3",
     "gatsby-plugin-image": "^3.13.1",
@@ -12,10 +13,16 @@
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "semantic-ui-css": "^2.5.0",
+    "semantic-ui-react": "^2.1.5"
   },
   "devDependencies": {
-    "prettier": "^2.8.8"
+    "@types/react": "^18.2.65",
+    "@types/react-dom": "^18.2.21",
+    "gatsby-plugin-sass": "^6.13.1",
+    "prettier": "^2.8.8",
+    "sass": "^1.72.0"
   },
   "keywords": [
     "gatsby"
@@ -28,7 +35,9 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public --repo https://github.com/PavelPivkin/microskhemka"
   },
   "repository": {
     "type": "git",
